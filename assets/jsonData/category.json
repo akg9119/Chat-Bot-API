@@ -1,0 +1,20 @@
+{
+  "outputList": [
+    {
+      "CategoryId": 1,
+      "CategoryName": "Greentin Products"
+    },
+    {
+      "CategoryId": 2,
+      "CategoryName": "Product Services"
+    },
+    {
+      "CategoryId": 3,
+      "CategoryName": "Prominent Clients"
+    },
+    {
+      "CategoryId": 4,
+      "CategoryName": "Know our Staff ?"
+    }
+  ]
+}

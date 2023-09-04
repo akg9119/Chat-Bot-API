@@ -1,0 +1,20 @@
+{
+    "outputList": [
+      {
+        "serviceInfo": "Provides continual cycle implementation from an idea to kaizen.",
+        "serviceId": 1,
+        "serviceName": "Suggestion/Kaizen"
+      },
+      {
+        "serviceInfo": "Unique DIGITAL platform for managing any type of incident,capturing incidents,escalate if not timely addressed",
+        "serviceId": 2,
+        "serviceName": "Nearmiss"
+      },
+      {
+        "serviceInfo": "Platform to Audit Any Thing, Any Time, Anywhere,easy Tool for creating and storing any audit templates,template Bank to secure and re use audit templates.",
+        "serviceId": 3,
+        "serviceName": "Auditor"
+      }
+    ]
+  }
+  

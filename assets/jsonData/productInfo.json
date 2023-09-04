@@ -1,0 +1,22 @@
+{
+    "outputList": [
+        {
+            "ProductAnnualSubscriptionCost": 1000000,
+            "ProductInfo": "myeNovation is cloud-based platform with various products built for implementing IDEAs, SUGGESTIONs, KAIZENS. The faster implementations assure quick returns with higher profit margins.",
+            "ProductName": "myeNovation-Greentin",
+            "ProductId": 1
+        },
+        {
+            "ProductAnnualSubscriptionCost:": 550000,
+            "ProductInfo:": "Cloud based solution, which solves problem of RFQ and Costing of Manufacturing Industry.",
+            "ProductName:": "Excelleta-Greentin",
+            "ProductId:": 2
+        },
+        {
+            "ProductAnnualSubscriptionCost:": 400000,
+            "ProductInfo:": "We have expertise in supporting, customizing or scaling up customers'existing Salesforce® implementation.",
+            "ProductName:": "Venda4s-Tech-Greentin",
+            "ProductId:": 3
+        }
+    ]
+}

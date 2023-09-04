@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en" ng-app="myApp"  class="no-js"> <!--<![endif]-->
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ChatBot</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <!-- <link rel="stylesheet" href="lib/html5-boilerplate/dist/css/normalize.css">
+  <link rel="stylesheet" href="lib/html5-boilerplate/dist/css/main.css"> -->
+  <link rel="stylesheet" href="app.css">
+  <link rel="stylesheet" href="chatBot/chatBot.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0" />
+</head>
+
+<body>
+  <main>
+    <!-- Header Start -->
+    <header>
+      <nav class="nav container">
+        <h1 class="nav_logo"><a href="#">GreenTin</a></h1>
+
+        <ul class="menu_items">
+          <img src="../assets/images/times.svg" alt="timesicon" id="menu_toggle" />
+          <li><a href="#" class="nav_link">Home</a></li>
+          <li><a href="#" class="nav_link">About</a></li>
+          <li><a href="#" class="nav_link">Service</a></li>
+          <li><a href="#" class="nav_link">Project</a></li>
+          <li><a href="#" class="nav_link">Contact</a></li>
+          <li><a href="#!/chatBot" class="nav_link"></a></li>
+          <!-- <span class="btn btn-danger"  ng-show="chatbotVisible">close</span> -->
+        </ul>
+        <img src="../assets/images/bars.svg" alt="timesicon" id="menu_toggle" />
+      </nav>
+    </header>
+    <!-- Header End -->
+
+    <!-- Hero Start -->
+    <section class="hero">
+      <div class="container">
+        <div class="row container">
+          <div class="column">
+            <h2>Top free tool and extension to <br>radiply grow your business</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis, architecto? Consectetur enim
+              obcaecati velit quibusdam iure, perspiciatis accusantium, voluptatibus possimus cum voluptates dolorum
+              optio ab vitae. Praesentium voluptas quia voluptates at aperiam aliquid vitae autem!</p>
+
+            <div class="buttons">
+              <button class="btn">Read More</button>
+              <button class="btn btn-default">Contact Us</button>
+            </div>
+          </div>
+
+          <div class="column">
+            <img src="../assets/images/hero.png" alt="heroImg" class="hero_img" />
+          </div>
+          <div ng-view> </div>
+        </div>
+      </div>
+      <img src="../assets/images/bg-bottom-hero.png" alt="" class="curveImg" />
+
+    </section>
+    <!-- Hero End-->
+    <!-- <section class="about" style="height: 255px;"> -->
+
+    </section>
+
+  </main>
+  <script src="../assets/library/angular.min.js"></script>
+  <script src="../assets/library/angular-route.min.js"></script>
+  <script src="../assets/library/jquery.min.js"></script>
+  <script src="../assets/library/bootstrap.min.js"></script>
+  <script src="../assets/library/ui-select.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <!-- <script src="view1/view1.js"></script> -->
+  <script src="app.js"></script>
+  <script src="./chatBot/chatBot.js"></script>
+  <script src="core/version/version.js"></script>
+  <script src="core/version/version-directive.js"></script>
+  <script src="core/version/interpolate-filter.js"></script>
+</body>
+
+</html>

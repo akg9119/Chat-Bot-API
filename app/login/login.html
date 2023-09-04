@@ -1,0 +1,46 @@
+<div class="home-details nav-links1">
+  <form ng-submit="addLine()">
+    <div class="home-text">
+      <div class="deptClass">
+        <label for="selDept" id="deptHeader">Select Department:</label>
+        <select class="form-control" id="selDept" name="dept" ng-model="selectedDept"
+          ng-options="dept as dept.deptName for dept in deptList" ng-change="lineList()" required>
+          <option value="" disabled selected>Select a department</option>
+        </select>
+      </div>
+    </div>
+    <div class="deptClass" ng-show="selectedDept">
+      <label for="linedata" id="deptHeader">Select Line:</label>
+      <ui-select multiple ng-model="selectedLine" theme="bootstrap" ng-change="onSelectedLineChange(selectedLine)">
+        <ui-select-match placeholder="Click here to select line">{{$item.name}}</ui-select-match>
+        <ui-select-choices repeat="line in linelist">
+          {{line.name}}
+        </ui-select-choices>
+      </ui-select>
+    </div>
+    <div class="containerAdd">
+      <div class="row">
+        <div class="col-md-6">
+          <button type="button" class="btn btn-lg buttonAdd bg-primary" ng-click="addLine()"
+            ng-click="clearSelectedLines()">Add</button>
+        </div>
+      </div>
+      <div class="added-data" ng-if="add">
+        <table class="added-table">
+          <thead>
+            <tr>
+              <th>Line Name:</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr ng-repeat="line in selectedLineList">
+              <td>{{line.name}}</td>
+            </tr>
+          </tbody>
+        </table>
+        <span><button type="button" class="btn  btn-lg  bg-danger buttonAdd"
+            ng-click="cancelAdd()">Cancel</button></span>
+      </div>
+    </div>
+  </form>
+</div>

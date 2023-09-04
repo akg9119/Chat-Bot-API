@@ -1,0 +1,144 @@
+<div class="chatbot-toggler" ng-click="toggleChatbox()">
+  <span class="material-symbols-rounded" ng-click="firstName()">mode_comment</span>
+  <span class="material-symbols-outlined" ng-if="showChatbox">close</span>
+</div>
+
+<!-- Chatbot chatbox -->
+<div class="chat-container" ng-class="{ 'active': showChatbox }">
+  <div class="chat-header">
+    <h3>GreenTin ChatBot</h3>
+  </div>
+
+  <div class="MainQuestion">
+    <div class="   user-chat" ng-repeat="allCategory in questionList" ng-click="outputList(allCategory)">
+      {{allCategory.CategoryName}}
+    </div>
+  </div>
+  <div class="chat-history">
+    <div class="firstName" ng-show="userName">{{ welcomeMessage }}</div>
+
+   
+
+    <div class="chat-message">
+     
+      <!----------------- Greentin Products -->
+      <div class="questionSpace"></div>
+     
+      <div class="userMessage AllQuestion" ng-repeat="info in productList">
+        <div class="questionData bot-chat" ng-click="productInfo(info)">
+          {{info.Question}}
+        </div>
+      </div>
+
+      <!-- Greentin Product Information -->
+      <div class="space"></div>
+      <div class="lastOutput" ng-if="showProductInfo">
+        <div class="userMessage">
+          <div class="questionData bot-chat" ng-repeat="productInfo in productInfoGreentinProduct"
+            ng-if="productInfo.ProductName != undefined && productInfo.ProductInfo != undefined && productInfo.ProductAnnualSubscriptionCost != undefined">
+
+            <div class="userMessage">
+              <h5 style="color: black;"><u>Product Name:</u></h5>{{productInfo.ProductName}}
+            </div>
+
+            <div class="userMessage">
+              <h5 style="color: black;"><u>Product Information:</u></h5>{{ productInfo.ProductInfo }}
+            </div>
+
+            <div class="userMessage">
+              <h5 style="color: black;"><u>Product subscription cost:</u> </h5>{{
+              productInfo.ProductAnnualSubscriptionCost}}
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <!----------------- Product Services -->
+      <div class="space"></div>  <div class="userMessage AllQuestionLeft" ng-repeat="info in serviceList">
+        <div class="questionData bot-chat" ng-click="serviceInfo(info)">
+          {{info.Question}}
+        </div>
+      </div>
+      <!-- product service Information -->
+      <div class="space"></div>
+      <div class="lastOutput">
+        <div class="userMessage">
+          <div class="questionData bot-chat"  ng-if="showInfo" ng-repeat="serviceInfoShow in serviceInfoData">
+            <div class="userMessage" ng-if="serviceInfoShow.serviceName != undefined">
+              <h5 style="color: black;"><u>Product Name:</u></h5>{{serviceInfoShow.serviceName}}
+            </div>
+            <div class="userMessage" ng-if="serviceInfoShow.serviceInfo != undefined">
+              <h5 style="color: black;"><u>Product Information:</u></h5>{{serviceInfoShow.serviceInfo}}
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <!--------------------- Prominent Clients -->
+     
+      <div class="userMessage AllQuestion" ng-repeat="info in clientsList">
+        <div class="questionData bot-chat" ng-click="clientsInfo(info)">
+          {{info.Question}}
+        </div>
+      </div>
+      <!---------------------- prominent Clients -->
+      <div class="space"></div>
+      <div class="lastOutput">
+        <div class="userMessage">
+          <div class="questionData bot-chat"  ng-repeat="showClients in ClientsDetails" ng-if="showClients"
+            ng-repeat="showClients in ClientsDetails">
+
+            <div class="userMessage" ng-if="showClients.clientName != undefined">
+              <h5 style="color: black;"><u>Client Name:</u></h5>{{showClients.clientName}}
+            </div>
+
+            <div class="userMessage" ng-if="showClients.clientUrl != undefined">
+              <h5 style="color: black;"><u>Client URL:</u></h5>{{showClients.clientUrl}}
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <!------------------- Know our Staff -->
+      <div class="space"></div>
+      <div class="userMessage AllQuestionLeft" ng-repeat="info in StaffList">
+        <div class="questionData bot-chat" ng-click="employeeInfo(info)">
+          {{info.Question}}
+        </div>
+      </div>
+      <!------------------- Know our Staff Information -->
+      <div class="space"></div>
+      <div class="lastOutput">
+        <div class="userMessage">
+          <div class="questionData bot-chat" ng-if="EmpDetails" ng-repeat="showStaff in staffInfo">
+
+            <div class="userMessage" ng-if="showStaff.employeeName != undefined">
+              <h5 style="color: black;"><u>Employee Name:</u></h5>{{showStaff.employeeName}}
+            </div>
+
+            <div class="userMessage" ng-if="showStaff.employeeMailId != undefined">
+              <h5 style="color: black;"><u>Employee Email ID:</u></h5>{{showStaff.employeeMailId}}
+            </div>
+
+            <div class="userMessage" ng-if="showStaff.employeeDesignation != undefined">
+              <h5 style="color: black;"><u>Employee Designation:</u></h5>{{showStaff.employeeDesignation}}
+            </div>
+
+            <div class="userMessage" ng-if="showStaff.employeeContact != undefined">
+              <h5 style="color: black;"><u>Employee Email ID:</u></h5>{{showStaff.employeeContact}}
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="user-input">
+    <textarea class="form-control" placeholder="Type your message here..." ng-model="userText" required></textarea>
+    <div class="input-group-append">
+      <span id="send-btn" class="material-symbols-rounded input-group-text" ng-click="sendUserInput()">send</span>
+    </div>
+  </div>
+</div>
